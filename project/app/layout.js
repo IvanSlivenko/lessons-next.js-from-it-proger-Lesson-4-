@@ -1,4 +1,5 @@
-import { bebas, geistSans, ibmPlex } from "./fonts";
+import Header from "./components/Header";
+import { bebas, geistSans, ibmPlex } from "./fonts/fonts";
 import "./globals.css";
 
 export const metadata = {
@@ -12,7 +13,8 @@ export default function RootLayout({ children }) {
       <body 
       className={`${bebas.className}`}
       >
-        {children}
+        <Header/>
+        <div className="container">{children}</div>
       </body>
     </html>
   );
