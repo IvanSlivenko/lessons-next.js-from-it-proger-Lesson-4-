@@ -1,5 +1,13 @@
-
 import Post from '@/app/components/Post'
+
+
+export async function generateMetadata({ params, searchParams}) {
+    const post =  await fetchData( params.id )
+    return {
+        title: post.title + ' - стаття',
+        description: post.body
+    }
+}
 
 async function fetchData(id) {
     const res = await fetch('https://jsonplaceholder.typicode.com/posts/' + id);
@@ -7,7 +15,6 @@ async function fetchData(id) {
     return result;
 }
 
-// export default async function Post({ params }) {
 const PagePost = async ({ params }) => {
 
     const { id } = await params;

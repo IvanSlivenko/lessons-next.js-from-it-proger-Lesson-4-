@@ -1,6 +1,12 @@
 import { bebasLocal } from "../fonts/fonts";
 import Link from "next/link";
 
+export const metadata = {
+  title: "Про нас",
+  description: "Опис сторінки про нас",
+  keywords: ''
+};
+
 export default function About() {
     return (
         <div className="post">
@@ -30,7 +36,7 @@ export default function About() {
                 Когось він опустив, когось підняв
                 <br></br>
                 А є на кого, взагалі, забив</p>
-                
+
                 <Link href="/">Home</Link>
         </div>
     );
