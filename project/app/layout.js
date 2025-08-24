@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import { bebas, geistSans, ibmPlex } from "./fonts/fonts";
+import { bebas, bebasLocal, geistSans, ibmPlex } from "./fonts/fonts";
 import "./globals.css";
 
 export const metadata = {
@@ -7,13 +7,13 @@ export const metadata = {
   description: "Lessons Next from itProger",
 };
 
-export default function RootLayout({ children }) { 
+export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body 
-      className={`${bebas.className}`}
+      <body
+        className={`${bebas.className}`}
       >
-        <Header/>
+        <Header />
         <div className="container">{children}</div>
       </body>
     </html>

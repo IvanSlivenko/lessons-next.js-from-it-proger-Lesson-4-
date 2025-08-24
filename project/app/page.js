@@ -14,8 +14,6 @@ export default async function Home() {
 
   return (
     <div>
-
-      {/* <h1>Головна сторінка</h1> */}
       {posts.map(el=>(
         <div key={el.id} className="post">
           <h2>{el.title}</h2>
